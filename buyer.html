@@ -20,9 +20,26 @@
 
     <main class="container">
         <header class="page-header">
-            <h1>Find Your Vehicle</h1>
-            <p>Quality listings from our community of trusted sellers.</p>
+            <h1>Find Your Next Ride</h1>
+            <p>From Nairobi strees to cross-country drive, discover cars that match your lifestyle.</p>
         </header>
+
+        <section class="featured-cars">
+    <h2>🔥 Featured Deals</h2>
+    <div class="grid-display">
+        <div class="lux-card">
+            <h3>Toyota Prado 2018</h3>
+            <p>KES 5,800,000</p>
+            <span>✔ Verified Seller</span>
+        </div>
+
+        <div class="lux-card">
+            <h3>Mazda CX-5 2020</h3>
+            <p>KES 3,200,000</p>
+            <span>✔ Low Mileage</span>
+        </div>
+    </div>
+</section>
 
         <section class="filter-controls">
             <div class="search-box">
@@ -32,8 +49,8 @@
             
             <div class="filter-grid">
                 <div class="input-group">
-                    <label>Max Price</label>
-                    <input type="number" id="priceFilter" placeholder="15000">
+                    <label>Max Price(KES)</label>
+                    <input type="number" id="priceFilter" placeholder="20,000,000">
                 </div>
                 <div class="input-group">
                     <label>Make/Brand</label>
@@ -48,7 +65,7 @@
 
         <section class="catalog">
             <h2>Available Inventory</h2>
-            <div id="carListings" class="grid-display">
+            <div id="carListings" class="lux-grid">
                 </div>
         </section>
 
@@ -69,7 +86,7 @@
                         <input type="email" id="buyerEmail" placeholder="Email Address" required>
                     </div>
                     <div class="form-row">
-                        <input type="tel" id="buyerPhone" placeholder="Phone (e.g. 123-456-7890)" required>
+                        <input type="tel" id="buyerPhone" placeholder="Phone (e.g. +254 7xx xxx xxx)" required>
                         <select id="selectedCar" required>
                             <option value="">-- Choose a Car --</option>
                         </select>
