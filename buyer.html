@@ -1,4 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Cars | LUXÉ AUTO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">LUXÉ AUTO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyer.html" class="active">Browse</a></li>
+                <li><a href="seller.html">Sell</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="page-header">
+            <h1>Find Your Vehicle</h1>
+            <p>Quality listings from our community of trusted sellers.</p>
+        </header>
+
+        <section class="filter-controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search brand or model...">
+                <button id="searchBtn" class="btn-main">Search</button>
+            </div>
+            
+            <div class="filter-grid">
+                <div class="input-group">
+                    <label>Max Price</label>
+                    <input type="number" id="priceFilter" placeholder="15000">
+                </div>
+                <div class="input-group">
+                    <label>Make/Brand</label>
+                    <input type="text" id="brandFilter" placeholder="Toyota, BMW...">
+                </div>
+                <div class="filter-actions">
+                    <button id="filterBtn" class="btn-sub">Apply</button>
+                    <button id="clearBtn" class="btn-link">Clear</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog">
+            <h2>Available Inventory</h2>
+            <div id="carListings" class="grid-display">
+                </div>
+        </section>
+
+        <section class="saved-cars">
+            <h2>Saved for Later</h2>
+            <div id="favoritesList" class="grid-display">
+                </div>
+        </section>
+
+        <section class="inquiry-form">
+            <div class="form-content">
+                <h2>Interested in a Vehicle?</h2>
+                <p>Send your details below and the seller will reach out to you.</p>
+                
+                <form id="buyerContactForm">
+                    <div class="form-row">
+                        <input type="text" id="buyerName" placeholder="Full Name" required>
+                        <input type="email" id="buyerEmail" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" id="buyerPhone" placeholder="Phone (e.g. 123-456-7890)" required>
+                        <select id="selectedCar" required>
+                            <option value="">-- Choose a Car --</option>
+                        </select>
+                    </div>
+                    <textarea id="buyerMessage" placeholder="Message to seller..." rows="4"></textarea>
+                    <button type="submit" class="btn-submit">Submit Inquiry</button>
+                </form>
+                <div id="buyerFormMessage"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="carModal" class="modal-overlay">
+        <div class="modal-card">
+            <span class="modal-close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 LUXÉ AUTO. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
