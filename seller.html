@@ -1,4 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car - LUXÉ AUTO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="nav-wrap">
+        <div class="lux-wrap nav-flex">
+            <a href="index.html" class="logo">LUXÉ AUTO</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyer.html">Browse Cars</a></li>
+                <li><a href="seller.html" class="active">Sell Your Car</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <header class="page-header">
+            <h1>List Your Car</h1>
+            <p>Get in front of thousands of buyers actively looking</p>
+        </header>
+
+        <section class="seller-section">
+            <form id="sellerForm" class="seller-form">
+
+                <div class="form-section">
+                    <h3>Car Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="brand">Car Brand *</label>
+                        <input type="text" id="brand" name="brand" placeholder="e.g., Honda, Toyota, Mazda" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="model">Model *</label>
+                            <input type="text" id="model" name="model" placeholder="e.g., Civic, Corolla" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year *</label>
+                            <input type="number" id="year" name="year" placeholder="2020" min="1990" max="2025" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price">Price (KES) </label>
+                            <input type="number" id="price" name="price" placeholder="e.g., 20,000,000" min="0" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mileage">Mileage (miles)</label>
+                            <input type="number" id="mileage" name="mileage" placeholder="e.g., 45000" min="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Vehicle Details</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="transmission">Transmission</label>
+                            <select id="transmission" name="transmission">
+                                <option value="">Select transmission</option>
+                                <option value="Automatic">Automatic</option>
+                                <option value="Manual">Manual</option>
+                                <option value="CVT">CVT</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="fuelType">Fuel Type</label>
+                            <select id="fuelType" name="fuelType">
+                                <option value="">Select fuel type</option>
+                                <option value="Gasoline">Gasoline</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Hybrid">Hybrid</option>
+                                <option value="Electric">Electric</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description *</label>
+                        <textarea id="description" name="description" placeholder="Tell us about your car's condition, features, maintenance history, etc." rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="carImage">Upload Car Photo *</label>
+                        <input type="file" id="carImage" name="carImage" accept="image/*" required>
+                        <p style="font-size: 12px; color: #999; margin-top: 4px;">Upload a clear photo of your car</p>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Your Contact Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="sellerName">Your Full Name *</label>
+                        <input type="text" id="sellerName" name="sellerName" placeholder="Full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sellerEmail">Your Email Address *</label>
+                        <input type="email" id="sellerEmail" name="sellerEmail" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sellerPhone">Your Phone Number *</label>
+                        <input type="tel" id="sellerPhone" name="sellerPhone" placeholder="(123) 456-7890" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn seller-submit">📤 List Your Car</button>
+                    <button type="reset" class="reset-btn">Clear Form</button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <h3>✓ Success!</h3>
+                <p>Your car has been listed successfully! Buyers can now see your listing.</p>
+                <button onclick="resetSellerForm()" class="reset-btn">List Another Car</button>
+            </div>
+
+            <section class="my-listings">
+                <h2>Your Car Listings</h2>
+                <div id="myListings" class="car-grid">
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 LUXÉ AUTO. All rights reserved.</p>
+    </footer>
+
+</body>
 </html>
